@@ -22,7 +22,7 @@ publishing {
             url = "https://github.com/MrShoffen/task-tracker-commons"
             credentials {
                 username = "MrShoffen"
-                password = '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'
+
             }
         }
     }
