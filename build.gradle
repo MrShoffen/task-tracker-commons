@@ -3,8 +3,8 @@ plugins {
     id 'maven-publish'
 }
 
-group = 'org.mrshoffen.ws'
-version = '0.0.1'
+group = 'com.github.MrShoffen'
+version = '1.0.0'
 
 java {
     toolchain {
@@ -16,16 +16,7 @@ java {
 
 
 publishing {
-    repositories {
-        maven {
-            name = "GitHubPackages"
-            url = "https://github.com/MrShoffen/task-tracker-commons"
-            credentials {
-                username = "MrShoffen"
 
-            }
-        }
-    }
 
     publications {
         maven(MavenPublication) {
