@@ -1,0 +1,41 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+}
+
+group = 'org.mrshoffen.ws'
+version = '0.0.1'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+
+
+
+publishing {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = "https://github.com/MrShoffen/task-tracker-commons"
+            credentials {
+                username = "MrShoffen"
+                password = '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'
+            }
+        }
+    }
+
+    publications {
+        maven(MavenPublication) {
+            from components.java
+            groupId = 'org.mrshoffen.ws'
+            artifactId = 'common'
+            version = '1.0'
+        }
+    }
+
+}
+
+
