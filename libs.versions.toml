@@ -1,0 +1,22 @@
+[versions]
+# Добавляем версию библиотеки
+taskTrackerCommons = "1.0.0"
+springBoot = "3.4.4"
+springCloud = "2024.0.0"
+mapstruct = "1.6.3"
+jjwt = "0.12.6"
+postgresql = "42.7.4"
+micrometer = "1.14.3"
+micrometerTracing = "1.4.3"
+zipkin = "3.4.3"
+feignMicrometer = "13.6"
+h2 = "2.3.232"
+
+[libraries]
+# Добавляем саму библиотеку
+task-tracker-commons = { module = "com.github.MrShoffen:task-tracker-commons", version.ref = "taskTrackerCommons" }
+
+
+[plugins]
+spring-boot = { id = "org.springframework.boot", version.ref = "springBoot" }
+spring-dependency-management = { id = "io.spring.dependency-management", version = "1.1.7" }
