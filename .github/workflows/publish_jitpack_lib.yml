@@ -50,4 +50,6 @@ jobs:
           draft: false
           prerelease: false
 
-      - uses: js6pak/start-jitpack@v1
+      - uses: badasintended/autojitpack@v1
+        with:
+          version: ${{ steps.extract-version.outputs.version }}
