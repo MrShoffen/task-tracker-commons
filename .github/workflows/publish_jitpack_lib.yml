@@ -49,3 +49,5 @@ jobs:
             Изменения: https://github.com/${{ github.repository }}/compare/previous-tag...${{ github.sha }}
           draft: false
           prerelease: false
+
+      - uses: js6pak/start-jitpack@v1
