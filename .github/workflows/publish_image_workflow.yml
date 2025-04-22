@@ -1,0 +1,51 @@
+name: Create Release from Gradle Version
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'build.gradle'
+
+permissions:
+  contents: write
+
+jobs:
+  create-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Extract version from build.gradle
+        id: extract-version
+        run: |
+          VERSION=$(grep "version =" build.gradle | cut -d "'" -f 2)
+          echo "Extracted version: $VERSION"
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Create Git tag
+        if: steps.extract-version.outputs.version != ''
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git tag -a "${{ steps.extract-version.outputs.version }}" -m "Release ${{ steps.extract-version.outputs.version }}"
+          git push origin "${{ steps.extract-version.outputs.version }}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.extract-version.outputs.version }}
+          release_name: Release ${{ steps.extract-version.outputs.version }}
+          body: |
+            Автоматический релиз для версии ${{ steps.extract-version.outputs.version }}
+            Изменения: https://github.com/${{ github.repository }}/compare/previous-tag...${{ github.sha }}
+          draft: false
+          prerelease: false
