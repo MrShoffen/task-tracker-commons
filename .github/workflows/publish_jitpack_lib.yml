@@ -53,3 +53,19 @@ jobs:
       - uses: badasintended/autojitpack@v1
         with:
           version: ${{ steps.extract-version.outputs.version }}
+
+      - name: Send Event
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.PAT_WORKFLOW }}
+          repository: MrShoffen/task-tracker
+          event-type: update_submodule
+          client-payload: '{
+                    "source_repo": "${{ github.repository }}",
+                     "version": "${{ steps.extract-version.outputs.version }}",
+                     "commit_hash": "${{ github.sha }}",
+                     "custom_data": {
+                       "author": "${{ github.actor }}",
+                       "repo": "${{ github.repository }}"
+                     }
+                   }'
