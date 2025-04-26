@@ -1,4 +1,4 @@
-package org.mrshoffen.tasktracker.commons.kafka.event;
+package org.mrshoffen.tasktracker.commons.kafka.event.user;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,6 +12,10 @@ import java.util.UUID;
 @NoArgsConstructor
 @Builder
 public class UserCreatedEvent {
+
+    public static final String TOPIC = "event.users.created";
+
     private UUID id;
     private String email;
+    private String userIpAddr;
 }
