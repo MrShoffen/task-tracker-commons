@@ -16,7 +16,10 @@ public class RegistrationAttemptEvent {
     public static final String TOPIC = "event.registration.new";
 
     private UUID registrationId;
+
     private String email;
+    private String hashedPassword;
+
     private String timeZone;
     private String country;
     private String region;
