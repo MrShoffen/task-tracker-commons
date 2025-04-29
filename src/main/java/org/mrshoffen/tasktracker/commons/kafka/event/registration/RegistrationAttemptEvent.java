@@ -23,6 +23,11 @@ public class RegistrationAttemptEvent {
     private String email;
     private String hashedPassword;
 
+    private String firstName;
+    private String lastName;
+
+    private String avatarUrl;
+
     private String timeZone;
     private String country;
     private String region;
