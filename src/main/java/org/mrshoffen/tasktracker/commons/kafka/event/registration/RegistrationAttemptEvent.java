@@ -1,10 +1,11 @@
-package org.mrshoffen.tasktracker.commons.kafka.event.auth;
+package org.mrshoffen.tasktracker.commons.kafka.event.registration;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.Instant;
 import java.util.UUID;
 
 @Data
@@ -16,6 +17,8 @@ public class RegistrationAttemptEvent {
     public static final String TOPIC = "event.registration.new";
 
     private UUID registrationId;
+
+    private Instant validUntil;
 
     private String email;
     private String hashedPassword;
