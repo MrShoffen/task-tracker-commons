@@ -16,4 +16,5 @@ public class RegistrationSuccessfulEvent {
     public static final String TOPIC = "event.registration.success";
 
     private UUID registrationId;
+    private String email;
 }
