@@ -17,7 +17,7 @@ public class RegistrationAttemptEvent {
     public static final String TOPIC = "event.registration.new";
 
     private UUID registrationId;
-
+    private String confirmationLink;
     private Instant validUntil;
 
     private String email;
