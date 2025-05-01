@@ -15,7 +15,7 @@ public class AuthenticationSuccessfulEvent {
 
     public static final String TOPIC = "event.authentication.success";
 
-    private UUID registrationId;
+    private UUID userId;
     private String email;
     private String ipAddr;
 }
