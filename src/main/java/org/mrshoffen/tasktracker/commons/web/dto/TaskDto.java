@@ -1,14 +1,17 @@
 package org.mrshoffen.tasktracker.commons.web.dto;
 
-import lombok.Data;
-import org.mrshoffen.tasktracker.commons.utils.HateoasLinks;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.Instant;
 import java.util.UUID;
 
 
-@Data
-public class TaskResponseDto {
+@Getter
+@Setter
+@NoArgsConstructor
+public class TaskDto extends ResourceDto {
     private UUID id;
     private String name;
     private Boolean completed;
@@ -19,5 +22,4 @@ public class TaskResponseDto {
     private UUID workspaceId;
     private UUID deskId;
 
-    private HateoasLinks api;
 }
