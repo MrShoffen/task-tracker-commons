@@ -11,15 +11,12 @@ import java.util.UUID;
 @Getter
 @Setter
 @NoArgsConstructor
-public class TaskDto extends ResourceDto {
+public class DeskResponseDto extends ResourceDto {
     private UUID id;
     private String name;
-    private Boolean completed;
     private Instant createdAt;
-    private UUID parentTaskId;
 
     private UUID userId;
     private UUID workspaceId;
-    private UUID deskId;
 
 }

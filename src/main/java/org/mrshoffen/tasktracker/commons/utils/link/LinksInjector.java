@@ -12,7 +12,7 @@ import org.mrshoffen.tasktracker.commons.web.dto.ResourceDto;
  */
 public abstract class LinksInjector<T extends ResourceDto> {
 
-    public T injectLink(T dto) {
+    public T injectLinks(T dto) {
         dto.setApi(generateLinks(dto));
         return dto;
     }
