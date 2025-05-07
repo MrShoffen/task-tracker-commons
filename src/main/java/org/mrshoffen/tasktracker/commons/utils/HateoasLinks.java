@@ -1,20 +1,19 @@
 package org.mrshoffen.tasktracker.commons.utils;
 
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 
 import java.util.HashMap;
 import java.util.Map;
 
-@RequiredArgsConstructor(access = AccessLevel.PRIVATE)
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class HateoasLinks {
 
-    @Getter
-    private final Map<String, Map<String, String>> links;
 
-    private final String prefix;
+    private Map<String, Map<String, String>> links;
+
+    private String prefix;
 
     @NoArgsConstructor(access = AccessLevel.PRIVATE)
     public static class LinksBuilder {
