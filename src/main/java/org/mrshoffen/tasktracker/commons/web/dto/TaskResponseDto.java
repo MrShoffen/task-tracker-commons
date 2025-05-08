@@ -18,6 +18,8 @@ public class TaskResponseDto extends ResourceDto {
     private Instant createdAt;
     private UUID parentTaskId;
 
+    private Long orderIndex;
+
     private UUID userId;
     private UUID workspaceId;
     private UUID deskId;
