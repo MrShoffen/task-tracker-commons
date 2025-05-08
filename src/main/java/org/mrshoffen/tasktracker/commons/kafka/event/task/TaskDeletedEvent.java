@@ -13,7 +13,7 @@ import java.util.UUID;
 @Builder
 public class TaskDeletedEvent {
 
-    public static final String TOPIC = "event.desk.deleted";
+    public static final String TOPIC = "event.task.deleted";
 
     private UUID userId;
     private UUID workspaceId;
