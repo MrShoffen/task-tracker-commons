@@ -1,6 +1,6 @@
 package org.mrshoffen.tasktracker.commons.web.permissions;
 
-public enum Permissions {
+public enum Permission {
     READ,
     WRITE,
     UPDATE,
