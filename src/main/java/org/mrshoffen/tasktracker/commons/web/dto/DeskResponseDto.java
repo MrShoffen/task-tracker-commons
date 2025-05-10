@@ -12,13 +12,11 @@ import java.util.UUID;
 @Setter
 @NoArgsConstructor
 public class DeskResponseDto extends ResourceDto {
-    private UUID id;
-    private String name;
-    private Instant createdAt;
-
-    private Long orderIndex;
-
+    UUID id;
+    private String message;
+    private Instant createdAt = Instant.now();
     private UUID userId;
     private UUID workspaceId;
+    private UUID deskId;
 
 }

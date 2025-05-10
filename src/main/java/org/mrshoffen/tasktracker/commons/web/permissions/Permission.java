@@ -16,6 +16,5 @@ public enum Permission {
     UPDATE_TASK,
     DELETE_TASK,
 
-    CREATE_COMMENT,
-    DELETE_COMMENT
+    CREATE_DELETE_COMMENTS
 }
