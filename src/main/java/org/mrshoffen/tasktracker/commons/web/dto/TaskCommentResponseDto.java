@@ -16,6 +16,7 @@ public class TaskCommentResponseDto extends ResourceDto {
     private String message;
     private Instant createdAt = Instant.now();
     private UUID userId;
+    private String authorEmail;
     private UUID workspaceId;
     private UUID deskId;
 }
