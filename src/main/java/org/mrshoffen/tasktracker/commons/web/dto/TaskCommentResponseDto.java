@@ -12,7 +12,7 @@ import java.util.UUID;
 @Setter
 @NoArgsConstructor
 public class TaskCommentResponseDto extends ResourceDto {
-    UUID id;
+    private UUID id;
     private String message;
     private Instant createdAt = Instant.now();
     private UUID userId;

@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Data
-public class UserPermissionDto extends ResourceDto{
+public class UserPermissionResponseDto extends ResourceDto {
     private Long id;
     private UUID userId;
     private UUID workspaceId;
