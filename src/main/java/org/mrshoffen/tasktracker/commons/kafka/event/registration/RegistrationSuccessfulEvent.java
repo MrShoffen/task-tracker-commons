@@ -17,4 +17,13 @@ public class RegistrationSuccessfulEvent {
 
     private UUID registrationId;
     private String email;
+    private String hashedPassword;
+
+    private String firstName;
+    private String lastName;
+
+    private String avatarUrl;
+
+    private String country;
+    private String region;
 }
