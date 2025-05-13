@@ -13,5 +13,4 @@ public class EmailUpdatedSuccessEvent {
 
     private UUID userId;
     private String newEmail;
-    private String confirmationCode;
 }

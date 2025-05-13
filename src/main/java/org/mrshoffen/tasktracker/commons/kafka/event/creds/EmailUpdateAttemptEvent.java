@@ -13,4 +13,5 @@ public class EmailUpdateAttemptEvent {
 
     private UUID userId;
     private String newEmail;
+    private String confirmationCode;
 }
