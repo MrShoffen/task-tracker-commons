@@ -16,7 +16,8 @@ public class TaskResponseDto extends ResourceDto {
     private String name;
     private Boolean completed;
     private Instant createdAt;
-    private UUID parentTaskId;
+    private String color;
+    private String coverUrl;
 
     private Long orderIndex;
 

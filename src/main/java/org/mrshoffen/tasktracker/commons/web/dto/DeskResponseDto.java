@@ -15,6 +15,7 @@ public class DeskResponseDto extends ResourceDto {
     private UUID id;
     private String name;
     private Instant createdAt;
+    private String color;
 
     private Long orderIndex;
 
