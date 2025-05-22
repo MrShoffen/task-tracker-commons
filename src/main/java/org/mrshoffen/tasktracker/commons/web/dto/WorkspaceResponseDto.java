@@ -14,6 +14,7 @@ public class WorkspaceResponseDto extends ResourceDto {
     private UUID id;
     private String name;
     private Boolean isPublic;
+    private String coverUrl;
     private Instant createdAt;
 
     private UUID userId;
