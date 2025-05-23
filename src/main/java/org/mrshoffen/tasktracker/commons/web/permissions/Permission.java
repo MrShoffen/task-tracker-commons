@@ -25,6 +25,7 @@ public enum Permission {
     UPDATE_TASK_COVER,
     UPDATE_TASK_ORDER,
     UPDATE_TASK_DESK,
+    UPDATE_TASK_COMPLETION,
     DELETE_TASK,
 
     //Comments
