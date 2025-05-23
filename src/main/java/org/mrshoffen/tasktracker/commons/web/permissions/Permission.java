@@ -1,21 +1,33 @@
 package org.mrshoffen.tasktracker.commons.web.permissions;
 
 public enum Permission {
-    DELETE_WORKSPACE,
-    UPDATE_WORKSPACE,
-
-    ASSIGN_PERMISSIONS_TO_USER,
-
+    //Commons
     READ_WORKSPACE_CONTENT,
 
+    //Workspace
+    UPDATE_WORKSPACE_NAME,
+    UPDATE_WORKSPACE_COVER,
+    UPDATE_WORKSPACE_ACCESS,
+    UPDATE_WORKSPACE_PERMISSIONS,
+    DELETE_WORKSPACE,
+
+    //Desk
     CREATE_DESK,
-    UPDATE_DESK,
+    UPDATE_DESK_NAME,
+    UPDATE_DESK_COLOR,
+    UPDATE_DESK_ORDER,
     DELETE_DESK,
 
+    //Task
     CREATE_TASK,
-    UPDATE_TASK,
+    UPDATE_TASK_NAME,
+    UPDATE_TASK_COLOR,
+    UPDATE_TASK_COVER,
+    UPDATE_TASK_ORDER,
+    UPDATE_TASK_DESK,
     DELETE_TASK,
 
+    //Comments
     CREATE_READ_COMMENTS,
     DELETE_COMMENTS
 }
