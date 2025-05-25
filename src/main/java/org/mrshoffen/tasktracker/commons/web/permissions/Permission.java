@@ -30,5 +30,9 @@ public enum Permission {
 
     //Comments
     CREATE_READ_COMMENTS,
-    DELETE_COMMENTS
+    DELETE_COMMENTS,
+    
+    //Stickers
+    CREATE_STICKERS,
+    DELETE_STICKERS,
 }
