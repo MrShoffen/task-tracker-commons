@@ -10,7 +10,7 @@ import java.util.UUID;
 @Getter
 @Setter
 @NoArgsConstructor
-public class WorkspaceResponseDto extends ResourceDto {
+public class WorkspaceResponseDto {
     private UUID id;
     private String name;
     private Boolean isPublic;

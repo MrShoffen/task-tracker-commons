@@ -11,7 +11,7 @@ import java.util.UUID;
 @Getter
 @Setter
 @NoArgsConstructor
-public class TaskResponseDto extends ResourceDto {
+public class TaskResponseDto {
     private UUID id;
     private String name;
     private Boolean completed;
