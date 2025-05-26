@@ -14,8 +14,8 @@ import java.util.UUID;
 public class TaskCommentResponseDto extends ResourceDto {
     private UUID id;
     private String message;
-    private Instant createdAt = Instant.now();
+    private Instant createdAt;
     private UUID userId;
     private UUID workspaceId;
-    private UUID deskId;
+    private UUID taskId;
 }
