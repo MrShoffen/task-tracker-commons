@@ -14,12 +14,11 @@ import java.util.UUID;
 public class StickerResponseDto extends ResourceDto {
     private UUID id;
     private String name;
-    private Instant createdAt = Instant.now();
+    private Instant createdAt;
     private String color;
     private String icon;
     private UUID userId;
     private UUID workspaceId;
-    private UUID deskId;
     private UUID taskId;
 
 }
