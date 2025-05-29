@@ -17,6 +17,8 @@ public class DeskUpdatedEvent {
 
     public static final String TOPIC = "event.desk.updated";
 
+    private UUID workspaceId;
+    private UUID deskId;
     private Map<String, Object> updatedField;
     private Instant updatedAt;
     private UUID updatedBy;

@@ -17,6 +17,9 @@ public class TaskUpdatedEvent {
 
     public static final String TOPIC = "event.task.updated";
 
+    private UUID workspaceId;
+    private UUID deskId;
+    private UUID taskId;
     private Map<String, Object> updatedField;
     private Instant updatedAt;
     private UUID updatedBy;

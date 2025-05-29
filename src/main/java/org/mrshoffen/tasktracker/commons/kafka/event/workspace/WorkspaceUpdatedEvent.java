@@ -17,6 +17,7 @@ public class WorkspaceUpdatedEvent {
 
     public static final String TOPIC = "event.workspace.updated";
 
+    private UUID workspaceId;
     private Map<String, Object> updatedField;
     private Instant updatedAt;
     private UUID updatedBy;
