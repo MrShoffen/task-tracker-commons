@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.Instant;
 import java.util.UUID;
 
 @Data
@@ -18,5 +19,10 @@ public class DeskCreatedEvent {
     private UUID userId;
     private UUID workspaceId;
     private UUID deskId;
+
+    private String name;
+    private Instant createdAt;
+    private String color;
+    private Long orderIndex;
 
 }
