@@ -18,5 +18,4 @@ public class DeskCreatedEvent {
     public static final String TOPIC = "event.desk.created";
 
     private DeskResponseDto createdDesk;
-
 }
