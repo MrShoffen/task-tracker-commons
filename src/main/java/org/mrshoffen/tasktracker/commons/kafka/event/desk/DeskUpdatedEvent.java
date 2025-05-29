@@ -6,17 +6,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.mrshoffen.tasktracker.commons.web.dto.DeskResponseDto;
 
-import java.time.Instant;
-import java.util.UUID;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class DeskCreatedEvent {
+public class DeskUpdatedEvent {
 
-    public static final String TOPIC = "event.desk.created";
+    public static final String TOPIC = "event.desk.updated";
 
-    private DeskResponseDto createdDesk;
+    private DeskResponseDto updatedDesk;
 
 }

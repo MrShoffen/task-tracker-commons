@@ -10,9 +10,9 @@ import org.mrshoffen.tasktracker.commons.web.dto.TaskResponseDto;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class TaskCreatedEvent {
+public class TaskUpdatedEvent {
 
-    public static final String TOPIC = "event.task.created";
+    public static final String TOPIC = "event.task.updated";
 
-    private TaskResponseDto createdTask;
+    private TaskResponseDto updatedTask;
 }
