@@ -16,6 +16,7 @@ public class TaskDeletedEvent {
 
     public static final String TOPIC = "event.task.deleted";
 
+    //todo deleted BY
     private UUID userId;
     private UUID workspaceId;
     private UUID deskId;

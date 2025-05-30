@@ -20,5 +20,7 @@ public class StickerDeletedEvent {
     private UUID workspaceId;
     private UUID deskId;
     private UUID taskId;
+    private UUID stickerId;
+
     private Instant deletedAt;
 }

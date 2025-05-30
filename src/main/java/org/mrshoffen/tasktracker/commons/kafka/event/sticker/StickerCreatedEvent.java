@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.mrshoffen.tasktracker.commons.web.dto.StickerResponseDto;
 import org.mrshoffen.tasktracker.commons.web.dto.TaskResponseDto;
 
 @Data
@@ -14,5 +15,5 @@ public class StickerCreatedEvent {
 
     public static final String TOPIC = "event.sticker.created";
 
-    private TaskResponseDto createdSticker;
+    private StickerResponseDto createdSticker;
 }
