@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.Instant;
 import java.util.UUID;
 
 @Data
@@ -18,5 +19,7 @@ public class DeskDeletedEvent {
     private UUID userId;
     private UUID workspaceId;
     private UUID deskId;
+
+    private Instant deletedAt;
 
 }

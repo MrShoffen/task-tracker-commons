@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.mrshoffen.tasktracker.commons.web.dto.WorkspaceResponseDto;
 
 import java.util.UUID;
 
@@ -15,7 +16,6 @@ public class WorkspaceCreatedEvent {
 
     public static final String TOPIC = "event.workspace.created";
 
-    private UUID userId;
-    private UUID workspaceId;
+    private WorkspaceResponseDto createdWorkspace;
 
 }
