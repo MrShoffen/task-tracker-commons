@@ -14,6 +14,6 @@ public class CommentCreatedEvent {
 
     public static final String TOPIC = "event.comment.created";
 
-    private TaskCommentResponseDto createdSticker;
+    private TaskCommentResponseDto createdComment;
 
 }

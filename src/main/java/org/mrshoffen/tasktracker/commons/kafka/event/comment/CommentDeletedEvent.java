@@ -1,4 +1,4 @@
-package org.mrshoffen.tasktracker.commons.kafka.event.sticker;
+package org.mrshoffen.tasktracker.commons.kafka.event.comment;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,14 +12,14 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class StickerDeletedEvent {
+public class CommentDeletedEvent {
 
-    public static final String TOPIC = "event.sticker.deleted";
+    public static final String TOPIC = "event.comment.deleted";
 
     private UUID userId;
     private UUID workspaceId;
     private UUID taskId;
-    private UUID stickerId;
+    private UUID commentId;
 
     private Instant deletedAt;
 }
