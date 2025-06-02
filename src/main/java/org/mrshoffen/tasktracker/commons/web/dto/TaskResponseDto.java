@@ -1,5 +1,6 @@
 package org.mrshoffen.tasktracker.commons.web.dto;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -8,8 +9,7 @@ import java.time.Instant;
 import java.util.UUID;
 
 
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 public class TaskResponseDto {
     private UUID id;
