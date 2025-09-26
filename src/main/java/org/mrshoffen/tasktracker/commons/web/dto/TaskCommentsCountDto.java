@@ -14,4 +14,5 @@ import java.util.UUID;
 public class TaskCommentsCountDto {
     private UUID taskId;
     private Long count;
+    private Long unreadCount;
 }
